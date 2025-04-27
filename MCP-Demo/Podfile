@@ -1,0 +1,18 @@
+# Podfile for MCP Demo
+platform :ios, '16.0'
+
+target 'MCP-Demo' do
+  use_frameworks!
+  
+  # Pods for MCP-Demo
+  pod 'GoogleMaps', '~> 8.0.0'
+  
+  target 'MCP-DemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  
+  target 'MCP-DemoUITests' do
+    # Pods for testing
+  end
+end
