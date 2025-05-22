@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showOnboarding = true
+
     var body: some View {
-        MainTabView()
+        Group {
+            if showOnboarding {
+                OnboardingView {
+                    showOnboarding = false
+                }
+            } else {
+                MainTabView()
+            }
+        }
     }
 }
 
